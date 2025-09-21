@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Nayla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f8f9fa;
+        }
+        h1 {
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+        .btn-stylist {
+            background-color: #6f42c1;
+        }
+        .btn-customer {
+            background-color: #0d6efd;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Nayla</h1>
+    <div class="buttons">
+        <a href="{% url 'signup_stylist' %}" class="btn btn-stylist">Join as Stylist</a>
+        <a href="{% url 'signup_customer' %}" class="btn btn-customer">Join as Customer</a>
+    </div>
+    <p style="margin-top: 1.5rem;">
+        Already have an account? 
+        <a href="{% url 'login' %}">Log in</a>
+    </p>
+</body>
+</html>
